@@ -6,11 +6,14 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+@import "fonts";
+@import "landing";
+@import "header";
+@import "destinations";
+@import "crew";
+@import "technology";
