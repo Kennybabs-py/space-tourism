@@ -4,7 +4,7 @@
 @media screen and (max-width: 425px) {
   section.technology {
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-image: url(../public/assets/technology/background-technology-mobile.jpg);
     background-size: cover;
 
@@ -31,7 +31,7 @@
     .launch-vehicle {
       position: absolute;
       width: 100%;
-      height: 550px;
+      height: 580px;
       top: 180px;
       display: flex;
       flex-direction: column;
@@ -262,7 +262,7 @@
 
       .slider-container {
         position: absolute;
-        top: 338px;
+        top: 330px;
         width: 40%;
         height: 150px;
         left: 30;
