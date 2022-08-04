@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import spaceData from "../public/data.json";
+import Header from "components/Header/Header";
+import spaceData from "public/data.json";
 import Image from "next/image";
 
 const Destinations = () => {

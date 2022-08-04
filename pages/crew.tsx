@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import spaceData from "../public/data.json";
+import Header from "components/Header/Header";
+import spaceData from "public/data.json";
 import Image from "next/image";
 
 const Crew = () => {
@@ -29,7 +29,7 @@ const Crew = () => {
       </div>
 
       <div className="crew-personnel">
-        {/* personnel infornation */}
+        {/* personnel information */}
         <div className="personnel-info">
           <div className="info-text">
             <div className="name-role">

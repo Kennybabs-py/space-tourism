@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Header from "./Header";
+import React from "react";
+import Header from "components/Header/Header";
 import Link from "next/link";
+import styles from "styles/Landing.module.scss";
 
 const Landing = () => {
   return (
     <div>
-      <main className="landing">
+      <main className={styles.landing}>
         <Header />
-        <div className="landing-text">
+        <div className={styles.landing_text}>
           <span>so, you want to travel to</span>
           <span>space</span>
           <span>
@@ -18,8 +19,8 @@ const Landing = () => {
             this world experience!
           </span>
         </div>
-        <Link href="/destination">
-          <button>explore</button>
+        <Link href="/Destination">
+          <button className={styles.button}>explore</button>
         </Link>
       </main>
     </div>
