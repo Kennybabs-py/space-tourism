@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "components/Header/Header";
+import styles from "styles/Crew.module.scss";
 import spaceData from "public/data.json";
 import Image from "next/image";
 
