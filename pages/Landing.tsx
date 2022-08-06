@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "components/Header/Header";
 import Link from "next/link";
-import styles from "styles/Landing.module.scss";
+import styles from "styles/modules/Landing.module.scss";
 
 const Landing = () => {
   return (

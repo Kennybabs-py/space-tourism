@@ -5,16 +5,16 @@
 .landing {
   height: 1200px;
   width: 100%;
-  background-image: url(../public/assets/home/background-home-desktop.jpg);
+  background-image: url(../../public/assets/home/background-home-desktop.jpg);
   background-size: cover;
   background-position: center;
 
   @include respondMax(sm-desktop) {
-    background-image: url(../public/assets/home/background-home-mobile.jpg);
+    background-image: url(../../public/assets/home/background-home-desktop.jpg);
   }
 
   @include respondMax(mobile) {
-    background-image: url(../public/assets/home/background-home-mobile.jpg);
+    background-image: url(../../public/assets/home/background-home-mobile.jpg);
   }
 
   &_text {
@@ -26,7 +26,8 @@
     @include flex(left, space-between, column);
     color: white;
 
-    @include respondMax(mobile) {
+    @include respondMax(sm-desktop) {
+      @include border(white);
       width: 90%;
       height: 350px;
       margin: 0 auto;
@@ -72,7 +73,7 @@
         font-size: 18px;
         line-height: 32px;
 
-        @include respondMax(mobile) {
+        @include respondMax(sm-desktop) {
           font-size: 1em;
           line-height: 28px;
         }
@@ -112,7 +113,7 @@
     }
 
     &:hover {
-      box-shadow: 0px 0px 50px 100px rgba(255, 255, 255, 0.25);
+      box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.25);
     }
   }
 }

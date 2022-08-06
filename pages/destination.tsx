@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header/Header";
 import spaceData from "public/data.json";
-import styles from "styles/Destination.module.scss";
+import styles from "styles/modules/Destination.module.scss";
 import Image from "next/image";
 
 const Destinations = () => {

@@ -2,25 +2,36 @@
 @import "styles/mixins";
 @import "styles/variables";
 
-section.crews {
+.crews {
   width: 100%;
   height: 1200px;
-  background-image: url(../public/assets/crew/background-crew-desktop.jpg);
+  background-image: url(../../public/assets/crew/background-crew-desktop.jpg);
   background-size: cover;
+  background-position: center;
 
-  .meet-text {
+  @include respondMax(mobile) {
+    background-image: url(../../public/assets/crew/background-crew-mobile.jpg);
+  }
+
+  .meet_text {
     position: absolute;
+    @include flex(center, space-around, row);
     width: 20%;
     height: 40px;
     left: 150px;
     top: 212px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 4.27px;
     color: #ffffff;
     text-transform: uppercase;
+
+    @include respondMax(mobile) {
+      width: 70%;
+      height: 40px;
+      left: 15%;
+      top: 100px;
+      font-size: 0.8em;
+    }
 
     span {
       color: #ffffff;
@@ -29,46 +40,70 @@ section.crews {
     }
   }
 
-  .crew-personnel {
+  .crew_personnel {
     position: absolute;
     width: 90%;
     left: 5%;
     height: 800px;
     top: 300px;
-    // display: ;
 
-    .personnel-info {
+    @include respondMax(mobile) {
+      height: auto;
+      top: 170px;
+      @include flex(center, space-around, column);
+    }
+
+    .personnel_info {
       width: 100%;
       height: 80%;
       margin: 10px auto 0;
       padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include flex(center, space-between, row);
       box-sizing: border-box;
 
-      img {
-        width: 568px;
-        height: 712px;
+      @include respondMax(mobile) {
+        height: 800px;
+        @include flex(center, space-between, column-reverse);
       }
 
-      .info-text {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: space-around;
+      img {
+        width: 468px;
+        height: 612px;
+
+        @include respondMax(mobile) {
+          width: 200px;
+          height: 300px;
+          border-bottom: 1px solid #383b4b;
+        }
+      }
+
+      .info_text {
+        @include flex(left, space-around, column);
         color: white;
         width: 50%;
         height: 60%;
 
-        .name-role {
-          display: flex;
-          flex-direction: column;
-          align-items: left;
-          justify-content: space-evenly;
+        @include respondMax(mobile) {
+          position: relative;
+          top: -20px;
+          @include flex(center, space-around, column);
+          width: 100%;
+          height: 40%;
+        }
+
+        .name_role {
+          @include flex(left, space-evenly, column);
           color: white;
           width: 100%;
           height: 50%;
+
+          @include respondMax(mobile) {
+            @include flex(center, center, column);
+            height: 40%;
+            width: 100%;
+            height: 40%;
+            text-align: center;
+          }
 
           span {
             &:first-of-type {
@@ -80,6 +115,10 @@ section.crews {
               color: #ffffff;
               mix-blend-mode: normal;
               opacity: 0.5;
+
+              @include respondMax(mobile) {
+                font-size: 1em;
+              }
             }
 
             &:last-of-type {
@@ -90,6 +129,10 @@ section.crews {
               line-height: 64px;
               text-transform: uppercase;
               color: #ffffff;
+
+              @include respondMax(mobile) {
+                font-size: 1.5em;
+              }
             }
           }
         }
@@ -101,21 +144,33 @@ section.crews {
           font-size: 18px;
           line-height: 32px;
           color: $textColor1;
+
+          @include respondMax(mobile) {
+            width: 90%;
+            font-size: 1em;
+            line-height: 1.5em;
+            text-align: center;
+          }
         }
       }
     }
 
-    .slider-container {
+    .slider_container {
       position: absolute;
       width: 200px;
       height: 30px;
       left: 100px;
       top: 600px;
       height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      @include flex(center, space-evenly, row);
       margin: 10px auto 0;
+
+      @include respondMax(mobile) {
+        width: 40%;
+        height: 20px;
+        left: 30%;
+        top: 390px;
+      }
 
       span {
         width: 15px;
@@ -124,9 +179,15 @@ section.crews {
         mix-blend-mode: normal;
         opacity: 0.17;
         border-radius: 50%;
+        cursor: pointer;
         transition: 300ms ease-in-out;
 
-        &.active-btn {
+        @include respondMax(mobile) {
+          width: 12px;
+          height: 12px;
+        }
+
+        &.active_btn {
           background: white;
           opacity: 1;
           transition: 300ms ease-in-out;

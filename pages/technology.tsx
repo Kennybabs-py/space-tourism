@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "styles/modules/Tech.module.scss";
 import Header from "components/Header/Header";
 import spaceData from "public/data.json";
 
@@ -17,21 +18,22 @@ const Technology = () => {
   } = tech[value];
 
   return (
-    <section className="technology">
+    <section className={styles.technology}>
       <Header />
 
-      <div className="launch-text">
+      <div className={styles.launch_text}>
         <span>03</span>space launch 101
       </div>
 
-      <div className="launch-vehicle">
-        <div className="slider-container">
+      <div className={styles.launch_vehicle}>
+        <div className={styles.slider_container}>
           {tech.map((item, index) => {
+            const {} = item;
             return (
               <span
                 key={index}
                 onClick={() => setValue(index)}
-                className={index === value ? "active-btn" : ""}
+                className={index === value ? styles.active_btn : ""}
               >
                 {index}
               </span>
@@ -39,25 +41,25 @@ const Technology = () => {
           })}
         </div>
 
-        <div className="vehicle-info">
-          <div className="vehicle-text">
-            <div className="terminology">
+        <div className={styles.vehicle_info}>
+          <div className={styles.vehicle_text}>
+            <div className={styles.terminology}>
               <span>the terminology...</span>
               <span>{name}</span>
             </div>
-            <span className="description">{description}</span>
+            <span className={styles.description}>{description}</span>
           </div>
           <img
             loading="lazy"
             src={images.portrait}
             alt={name}
-            className="image-portrait"
+            className={styles.image_portrait}
           />
           <img
             loading="lazy"
             src={images.landscape}
             alt={name}
-            className=" image-landscape"
+            className={styles.image_landscape}
           />
         </div>
       </div>
