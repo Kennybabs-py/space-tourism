@@ -1,32 +1,21 @@
 import React, { useState } from "react";
-import Header from "@/components/Header/Header";
 import spaceData from "public/data.json";
 import styles from "styles/modules/Destination.module.scss";
 import Image from "next/image";
+import Header from "@/components/Header/Header";
+import { DestinationI } from "@/utils/@types/types";
 
 const Destinations = () => {
   const [value, setValue] = useState(0);
 
   const destinations = spaceData.destinations;
 
-  const {
-    name,
-    images,
-    description,
-    distance,
-    travel,
-  }: {
-    name: string;
-    images: { png: string; webp: string };
-    description: string;
-    distance: string;
-    travel: string;
-  } = destinations[value];
+  const { name, images, description, distance, travel }: DestinationI =
+    destinations[value];
 
   return (
     <section className={styles.destinations}>
       <Header />
-
       <div className={styles.pick_text}>
         <span>01 </span>pick your destination
       </div>

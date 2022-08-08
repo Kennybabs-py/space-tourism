@@ -49,9 +49,8 @@ const Header = () => {
           return (
             <Link href={item === "Home" ? "/" : `/${item}`} key={index}>
               <a
-                key={index}
                 onClick={() => setValue(index)}
-                className={`'' ${index === value && style.active_tab}`}
+                className={index === value ? style.active_tab : ""}
               >
                 0{index} {item}
               </a>

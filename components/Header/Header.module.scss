@@ -182,7 +182,7 @@
     backdrop-filter: blur(20px);
 
     @include respondMax(sm-desktop) {
-      height: 80%;
+      height: 60%;
     }
 
     @include respondMax(mobile) {
@@ -204,6 +204,11 @@
       box-sizing: border-box;
       text-transform: capitalize;
       cursor: pointer;
+
+      @include respondMax(sm-desktop) {
+        font-size: 12px;
+        text-align: center;
+      }
 
       &::after {
         position: absolute;

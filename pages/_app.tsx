@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
+
       <Component {...pageProps} />
     </>
   );

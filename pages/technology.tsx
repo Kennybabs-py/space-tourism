@@ -1,26 +1,18 @@
 import React, { useState } from "react";
 import styles from "styles/modules/Tech.module.scss";
-import Header from "components/Header/Header";
 import spaceData from "public/data.json";
+import { TechI } from "@/utils/@types/types";
+import Header from "@/components/Header/Header";
 
 const Technology = () => {
   const [value, setValue] = useState(0);
   const tech = spaceData.technology;
 
-  const {
-    name,
-    images,
-    description,
-  }: {
-    name: string;
-    images: { portrait: string; landscape: string };
-    description: string;
-  } = tech[value];
+  const { name, images, description }: TechI = tech[value];
 
   return (
     <section className={styles.technology}>
       <Header />
-
       <div className={styles.launch_text}>
         <span>03</span>space launch 101
       </div>

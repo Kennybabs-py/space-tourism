@@ -37,7 +37,6 @@
     }
 
     @include respondMax(mobile) {
-      @include border(white);
       width: 90%;
       height: 350px;
       margin: 0 auto;

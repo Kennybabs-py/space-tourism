@@ -26,9 +26,10 @@ section.destinations {
     text-transform: uppercase;
 
     @include respondMax(sm-desktop) {
+      @include flex(center, space-evenly, row);
       top: 150px;
-      width: 40%;
-      left: 30%;
+      width: 45%;
+      left: 27.5%;
     }
 
     @include respondMax(mobile) {
