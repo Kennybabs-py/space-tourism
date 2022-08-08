@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "@/components/Header/Header";
 import Link from "next/link";
-import styles from "./Landing.module.scss";
+import styles from "./Main.module.scss";
 
-const Landing = () => {
+const Main = () => {
   return (
     <div>
       <main className={styles.landing}>
@@ -27,4 +27,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Main;

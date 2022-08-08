@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import Landing from "components/Landing/Landing";
+import Main from "components/Main/Main";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Landing />
+      <Main />
     </>
   );
 };
