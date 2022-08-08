@@ -49,6 +49,7 @@ const Technology = () => {
             </div>
             <span className={styles.description}>{description}</span>
           </div>
+
           <img
             loading="lazy"
             src={images.portrait}

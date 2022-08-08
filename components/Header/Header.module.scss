@@ -15,8 +15,6 @@
     width: 100%;
     height: auto;
     padding: 10px;
-    left: 5%;
-    top: 18px;
   }
 
   .line {
@@ -30,6 +28,11 @@
     mix-blend-mode: normal;
     opacity: 0.25;
     z-index: 5;
+
+    @include respondMax(sm-desktop) {
+      width: 30%;
+      left: 10%;
+    }
 
     @include respondMax(mobile) {
       display: none;
@@ -174,8 +177,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @include flex(center, space-evenly, row);
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
+
+    @include respondMax(sm-desktop) {
+      height: 80%;
+    }
 
     @include respondMax(mobile) {
       display: none;

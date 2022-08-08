@@ -27,20 +27,28 @@
     color: white;
 
     @include respondMax(sm-desktop) {
+      width: 60%;
+      height: 350px;
+      margin: 0 auto;
+      top: 300px;
+      left: 15%;
+      @include flex(center, space-between, column);
+      font-size: 16px;
+    }
+
+    @include respondMax(mobile) {
       @include border(white);
       width: 90%;
       height: 350px;
       margin: 0 auto;
       top: 150px;
       left: 5%;
-      @include flex(center, space-between, column);
-      font-size: 16px;
     }
 
     span {
       color: $textColor1;
 
-      @include respondMax(mobile) {
+      @include respondMax(sm-desktop) {
         text-align: center;
       }
 
@@ -100,6 +108,17 @@
     text-transform: uppercase;
     box-sizing: border-box;
     transition: box-shadow 0.5s ease-in-out;
+
+    @include respondMax(sm-desktop) {
+      width: 250px;
+      height: 250px;
+      left: 35%;
+      top: 700px;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 37px;
+      letter-spacing: 2px;
+    }
 
     @include respondMax(mobile) {
       width: 150px;

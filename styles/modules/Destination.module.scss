@@ -25,6 +25,12 @@ section.destinations {
     color: #ffffff;
     text-transform: uppercase;
 
+    @include respondMax(sm-desktop) {
+      top: 150px;
+      width: 40%;
+      left: 30%;
+    }
+
     @include respondMax(mobile) {
       width: 80%;
       left: 10%;
@@ -48,6 +54,12 @@ section.destinations {
     height: 700px;
     top: 300px;
 
+    @include respondMax(sm-desktop) {
+      height: 850px;
+      top: 200px;
+      @include flex(center, space-between, column wrap);
+    }
+
     @include respondMax(mobile) {
       height: 750px;
       top: 150px;
@@ -61,6 +73,14 @@ section.destinations {
       height: 60px;
       @include flex(center, space-evenly, row);
       margin: 10px auto 0;
+
+      @include respondMax(sm-desktop) {
+        position: absolute;
+        left: 35%;
+        top: 10px;
+        width: 30%;
+        height: 60px;
+      }
 
       @include respondMax(mobile) {
         position: absolute;
@@ -122,6 +142,12 @@ section.destinations {
       box-sizing: border-box;
       @include flex(center, space-around, row);
 
+      @include respondMax(sm-desktop) {
+        height: 80%;
+        margin: auto;
+        @include flex(center, space-between, column);
+      }
+
       @include respondMax(mobile) {
         height: 100%;
         @include flex(center, space-between, column);
@@ -131,6 +157,11 @@ section.destinations {
         width: 445px;
         height: 445px;
         transition: all 0.5s ease-in-out;
+
+        @include respondMax(sm-desktop) {
+          width: 300px;
+          height: 300px;
+        }
 
         @include respondMax(mobile) {
           width: 150px;
@@ -147,6 +178,11 @@ section.destinations {
         color: white;
         width: 40%;
         height: 80%;
+
+        @include respondMax(sm-desktop) {
+          width: 80%;
+          height: 50%;
+        }
 
         @include respondMax(mobile) {
           position: relative;
@@ -177,6 +213,11 @@ section.destinations {
             font-size: 18px;
             color: $textColor1;
 
+            @include respondMax(sm-desktop) {
+              width: 80%;
+              text-align: center;
+            }
+
             @include respondMax(mobile) {
               font-size: 1em;
               width: 100%;
@@ -193,6 +234,11 @@ section.destinations {
           @include flex(left, space-around, row);
           box-sizing: border-box;
 
+          @include respondMax(sm-desktop) {
+            @include flex(center, space-around, row);
+            width: 80%;
+          }
+
           @include respondMax(mobile) {
             height: 200px;
             @include flex(center, space-around, column);
@@ -202,10 +248,7 @@ section.destinations {
           .distance {
             width: 60%;
             height: 100%;
-            display: flex;
-            align-items: left;
-            flex-direction: column;
-            justify-content: space-around;
+            @include flex(left, space-around, column);
 
             @include respondMax(mobile) {
               width: 100%;
@@ -219,11 +262,19 @@ section.destinations {
               font-size: 14px;
               color: $textColor1;
               letter-spacing: 2.3px;
+
+              @include respondMax(sm-desktop) {
+                text-align: center;
+              }
             }
             span:last-of-type {
               font-family: "Bellefair", serif;
               font-size: 28px;
               letter-spacing: 2.3px;
+
+              @include respondMax(sm-desktop) {
+                text-align: center;
+              }
             }
           }
           .travel {
@@ -242,12 +293,20 @@ section.destinations {
               font-size: 14px;
               color: $textColor1;
               letter-spacing: 2.3px;
+
+              @include respondMax(sm-desktop) {
+                text-align: center;
+              }
             }
             span:last-of-type {
               font-family: "Bellefair", serif;
               font-size: 28px;
               letter-spacing: 2.3px;
               text-transform: uppercase;
+
+              @include respondMax(sm-desktop) {
+                text-align: center;
+              }
             }
           }
         }
