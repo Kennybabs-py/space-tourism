@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "styles/modules/Crew.module.scss";
+import styles from "./Crew.module.scss";
 import spaceData from "public/data.json";
 import Header from "components/Header/Header";
 import { CrewI } from "@/utils/@types/types";

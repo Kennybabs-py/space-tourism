@@ -5,12 +5,12 @@
 section.destinations {
   width: 100%;
   height: 1200px;
-  background-image: url(../../public/assets/destination/background-destination-desktop.jpg);
+  background-image: url(../public/assets/destination/background-destination-desktop.jpg);
   background-size: cover;
   background-position: center;
 
   @include respondMax(mobile) {
-    background-image: url(../../public/assets/destination/background-destination-mobile.jpg);
+    background-image: url(../public/assets/destination/background-destination-mobile.jpg);
   }
 
   .pick_text {

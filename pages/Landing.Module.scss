@@ -5,16 +5,16 @@
 .landing {
   height: 1200px;
   width: 100%;
-  background-image: url(../../public/assets/home/background-home-desktop.jpg);
+  background-image: url(../public/assets/home/background-home-desktop.jpg);
   background-size: cover;
   background-position: center;
 
   @include respondMax(sm-desktop) {
-    background-image: url(../../public/assets/home/background-home-desktop.jpg);
+    background-image: url(../public/assets/home/background-home-desktop.jpg);
   }
 
   @include respondMax(mobile) {
-    background-image: url(../../public/assets/home/background-home-mobile.jpg);
+    background-image: url(../public/assets/home/background-home-mobile.jpg);
   }
 
   &_text {
