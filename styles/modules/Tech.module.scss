@@ -1,25 +1,25 @@
 @import "styles/fonts";
-@import "styles/mixins";
 @import "styles/variables";
+@import "styles/mixins";
 
-.crews {
+.technology {
   width: 100%;
   height: 1200px;
-  background-image: url(../public/assets/crew/background-crew-desktop.jpg);
+  background-image: url(../../public/assets/technology/background-technology-desktop.jpg);
   background-size: cover;
   background-position: center;
 
   @include respondMax(mobile) {
-    background-image: url(../public/assets/crew/background-crew-mobile.jpg);
+    background-image: url(../../public/assets/technology/background-technology-mobile.jpg);
   }
 
-  .meet_text {
+  .launch_text {
     position: absolute;
-    @include flex(center, space-around, row);
     width: 20%;
     height: 40px;
-    left: 150px;
+    left: 100px;
     top: 212px;
+    @include flex(center, space-around, row);
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 4.27px;
     color: #ffffff;
@@ -46,112 +46,105 @@
     }
   }
 
-  .crew_personnel {
+  .launch_vehicle {
     position: absolute;
-    width: 90%;
-    left: 5%;
-    height: 800px;
+    width: 95%;
+    left: 2%;
+    height: 650px;
     top: 300px;
+    @include flex(center, space-between, row);
 
     @include respondMax(sm-desktop) {
-      height: 800px;
-      top: 200px;
-      @include flex(center, space-around, column);
+      width: 100%;
+      left: auto;
+      height: 750px;
+      top: 180px;
+      @include flex(center, space-between, column);
     }
 
     @include respondMax(mobile) {
-      height: auto;
-      top: 170px;
-      @include flex(center, space-around, column);
+      height: 550px;
     }
 
-    .personnel_info {
+    .vehicle_info {
       width: 100%;
-      height: 80%;
+      height: 90%;
       margin: 10px auto 0;
       padding: 10px;
-      @include flex(center, space-between, row);
+      @include flex(center, space-around, row);
       box-sizing: border-box;
 
       @include respondMax(sm-desktop) {
-        margin: auto;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         @include flex(center, space-between, column-reverse);
       }
 
       @include respondMax(mobile) {
-        height: 800px;
+        width: 100%;
+        height: 100%;
         @include flex(center, space-between, column-reverse);
       }
 
-      img {
-        width: 468px;
-        height: 612px;
-
-        @include respondMax(sm-desktop) {
-          width: 200px;
-          height: 300px;
+      .image {
+        &_landscape {
+          display: none;
         }
 
-        @include respondMax(mobile) {
-          width: 200px;
-          height: 300px;
-          border-bottom: 1px solid #383b4b;
+        @include respondMax(sm-desktop) {
+          &_landscape {
+            display: inherit;
+            width: 90%;
+          }
+          &_portrait {
+            display: none;
+          }
         }
       }
 
-      .info_text {
+      .vehicle_text {
         @include flex(left, space-around, column);
         color: white;
         width: 50%;
-        height: 60%;
+        height: 70%;
 
         @include respondMax(sm-desktop) {
+          @include flex(center, space-evenly, column);
           width: 90%;
-          @include flex(center, space-around, column);
+          height: 35%;
         }
 
         @include respondMax(mobile) {
-          position: relative;
-          top: -20px;
-          @include flex(center, space-around, column);
+          @include flex(center, space-between, column);
           width: 100%;
-          height: 40%;
+          height: 50%;
         }
 
-        .name_role {
+        .terminology {
           @include flex(left, space-evenly, column);
           color: white;
           width: 100%;
           height: 50%;
 
           @include respondMax(sm-desktop) {
-            @include flex(center, center, column);
+            @include flex(center, space-between, column);
+            width: 100%;
+            height: auto;
           }
 
           @include respondMax(mobile) {
-            height: 40%;
             width: 100%;
-            height: 40%;
-            text-align: center;
+            height: 30%;
           }
 
           span {
             &:first-of-type {
-              font-family: "Bellefair", serif;
+              font-family: "Barlow Condensed", sans-serif;
               font-style: normal;
               font-weight: 400;
-              font-size: 32px;
+              font-size: 16px;
               text-transform: uppercase;
-              color: #ffffff;
-              mix-blend-mode: normal;
-              opacity: 0.5;
-
-              @include respondMax(sm-desktop) {
-                text-align: center;
-                width: 80%;
-                font-size: 1.8em;
-              }
+              color: $textColor1;
 
               @include respondMax(mobile) {
                 font-size: 1em;
@@ -159,7 +152,7 @@
             }
 
             &:last-of-type {
-              font-family: "Bellefair";
+              font-family: "Bellefair", serif;
               font-style: normal;
               font-weight: 400;
               font-size: 56px;
@@ -167,21 +160,16 @@
               text-transform: uppercase;
               color: #ffffff;
 
-              @include respondMax(sm-desktop) {
-                text-align: center;
-                width: 90%;
-                font-size: 3.2em;
-              }
-
               @include respondMax(mobile) {
-                font-size: 1.5em;
+                font-size: 1.9em;
+                line-height: 46px;
               }
             }
           }
         }
-        span.bio {
+        span.description {
           width: 80%;
-          font-family: "Barlow";
+          font-family: "Barlow Condensed", sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -189,61 +177,86 @@
           color: $textColor1;
 
           @include respondMax(sm-desktop) {
-            width: 90%;
-            font-size: 1em;
+            width: 80%;
+            font-size: 18px;
             line-height: 1.5em;
             text-align: center;
+          }
+
+          @include respondMax(mobile) {
+            font-size: 1em;
+            width: 100%;
           }
         }
       }
     }
 
     .slider_container {
-      position: absolute;
-      width: 200px;
-      height: 30px;
+      width: 100px;
+      height: 330px;
       left: 100px;
-      top: 600px;
-      height: 40px;
-      @include flex(center, space-evenly, row);
-      margin: 10px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      @include flex(center, space-around, column);
 
       @include respondMax(sm-desktop) {
-        top: 65%;
-        width: 30%;
-        left: 35%;
+        position: absolute;
+        top: 380px;
+        width: 60%;
+        height: 100px;
+        left: auto;
+        @include flex(center, space-around, row);
       }
 
       @include respondMax(mobile) {
-        width: 40%;
-        height: 20px;
-        left: 30%;
-        top: 390px;
+        width: 80%;
+        top: 160px;
+        @include flex(center, space-around, row);
       }
 
       span {
-        width: 15px;
-        height: 15px;
-        background: #ffffff;
-        mix-blend-mode: normal;
-        opacity: 0.17;
+        border: 1px solid $textColor1;
+        width: 80px;
+        height: 80px;
+        background: inherit;
         border-radius: 50%;
+        font-family: "Bellefair", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        color: #ffffff;
         cursor: pointer;
         transition: 300ms ease-in-out;
 
+        @include respondMax(sm-desktop) {
+          width: 60px;
+          height: 60px;
+          font-size: 20px;
+          color: #ffffff;
+        }
+
         @include respondMax(mobile) {
-          width: 12px;
-          height: 12px;
+          width: 40px;
+          height: 40px;
+          font-size: 15px;
         }
 
         &.active_btn {
+          border: none;
           background: white;
           opacity: 1;
+          color: black;
           transition: 300ms ease-in-out;
         }
 
         &:hover {
           background: white;
+          color: black;
         }
       }
     }

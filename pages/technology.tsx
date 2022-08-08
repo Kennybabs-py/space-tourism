@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Tech.module.scss";
+import styles from "styles/modules/Tech.module.scss";
 import spaceData from "public/data.json";
 import { TechI } from "@/utils/@types/types";
 import Header from "@/components/Header/Header";

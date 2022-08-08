@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import spaceData from "public/data.json";
-import styles from "./Destination.module.scss";
-import Image from "next/image";
+import styles from "styles/modules/Destination.module.scss";
 import Header from "@/components/Header/Header";
 import { DestinationI } from "@/utils/@types/types";
 
