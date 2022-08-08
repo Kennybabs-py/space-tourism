@@ -12,7 +12,7 @@ const Header = () => {
     setToggle((prev) => !prev);
   };
 
-  const listTab: string[] = ["Home", "Destination", "Crew", "Technology"];
+  const listTab: string[] = ["Home", "destination", "crew", "technology"];
 
   return (
     <nav className={style.nav}>
