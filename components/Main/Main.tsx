@@ -19,7 +19,7 @@ const Main = () => {
             this world experience!
           </span>
         </div>
-        <Link href="/Destination">
+        <Link href="/destination">
           <button className={styles.button}>explore</button>
         </Link>
       </main>
