@@ -1,13 +1,11 @@
 import React from "react";
-import Header from "@/components/Header/Header";
 import Link from "next/link";
-import styles from "./Main.module.scss";
+import styles from "./styles.module.scss";
 
 const Main = () => {
   return (
     <div>
       <main className={styles.landing}>
-        <Header />
         <div className={styles.landing_text}>
           <span>so, you want to travel to</span>
           <span>space</span>

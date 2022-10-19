@@ -1,7 +1,7 @@
-import React from "react";
-import Crews from "@/components/Crew/Crew";
+import Crews from "@/containers/Crew";
+import type { NextPage } from "next";
 
-const Crew = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Crews />
@@ -9,4 +9,4 @@ const Crew = () => {
   );
 };
 
-export default Crew;
+export default Home;

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import spaceData from "public/data.json";
-import styles from "./Destination.module.scss";
-import Header from "@/components/Header/Header";
+import styles from "./styles.module.scss";
 import { DestinationI } from "@/utils/@types/types";
 
 const Destinations = () => {
@@ -14,7 +13,6 @@ const Destinations = () => {
 
   return (
     <section className={styles.destinations}>
-      <Header />
       <div className={styles.pick_text}>
         <span>01 </span>pick your destination
       </div>

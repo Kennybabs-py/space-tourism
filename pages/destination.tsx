@@ -1,7 +1,7 @@
-import React from "react";
-import Destinations from "@/components/Destination/Destination";
+import type { NextPage } from "next";
+import Destinations from "@/containers/Destination";
 
-const Destination = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Destinations />
@@ -9,4 +9,4 @@ const Destination = () => {
   );
 };
 
-export default Destination;
+export default Home;

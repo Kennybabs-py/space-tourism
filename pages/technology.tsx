@@ -1,7 +1,7 @@
-import React from "react";
-import Technology from "@/components/Tech/Technology";
+import type { NextPage } from "next";
+import Technology from "@/containers/Tech";
 
-const Tech = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Technology />
@@ -9,4 +9,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default Home;

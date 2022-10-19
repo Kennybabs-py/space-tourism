@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import styles from "./Crew.module.scss";
+import { useState } from "react";
+import styles from "./styles.module.scss";
 import spaceData from "public/data.json";
-import Header from "components/Header/Header";
 import { CrewI } from "@/utils/@types/types";
 
 const Crews = () => {
@@ -13,7 +12,6 @@ const Crews = () => {
 
   return (
     <section className={styles.crews}>
-      <Header />
       <div className={styles.meet_text}>
         <span>02 </span>meet your crew
       </div>

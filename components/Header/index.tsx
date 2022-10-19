@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-// import Image from "next/image";
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-import style from "./Header.module.scss";
+import style from "./styles.module.scss";
 
 const Header = () => {
   const [value, setValue] = useState<number>();
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <nav className={style.nav}>
-      <img src="/assets/shared/logo.svg" width={40} height={40} alt="logo" />
+      <Image src="/assets/shared/logo.svg" width={40} height={40} alt="logo" />
 
       <hr className={style.line} />
 

@@ -2,6 +2,8 @@ import "styles/index.scss";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 
+import Header from "@/components/Header";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -13,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-
+      <Header />
       <Component {...pageProps} />
     </>
   );

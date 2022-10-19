@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styles from "./Tech.module.scss";
+import { useState } from "react";
+
+import styles from "./styles.module.scss";
 import spaceData from "public/data.json";
 import { TechI } from "@/utils/@types/types";
-import Header from "@/components/Header/Header";
 
 const Technology = () => {
   const [value, setValue] = useState(0);
@@ -12,7 +12,6 @@ const Technology = () => {
 
   return (
     <section className={styles.technology}>
-      <Header />
       <div className={styles.launch_text}>
         <span>03</span>space launch 101
       </div>
