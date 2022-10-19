@@ -1,12 +1,14 @@
-@import "styles/fonts";
-@import "styles/mixins";
+@use "@/styles/fonts";
+@use "@/styles/mixins" as *;
 
 .nav {
   position: absolute;
   width: 95%;
   height: 96px;
-  left: 5%;
   top: 40px;
+  margin: auto auto;
+  left: 0;
+  right: 0;
   @include flex(center, space-between, row);
   box-sizing: border-box;
 
@@ -15,6 +17,7 @@
     width: 100%;
     height: auto;
     padding: 10px;
+    background-color: black;
   }
 
   .line {
@@ -39,139 +42,7 @@
     }
   }
 
-  .ham_box {
-    // @include border(white);
-    @include flex;
-    position: absolute;
-    right: 3%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    display: none;
-
-    @include respondMax(mobile) {
-      display: inherit;
-    }
-
-    .hamburger {
-      background-color: white;
-      width: 30px;
-      height: 2px;
-      cursor: pointer;
-      transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 2px;
-        background-color: white;
-        transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-
-      &::before {
-        top: 15px;
-        right: 10px;
-      }
-      &::after {
-        bottom: 15px;
-      }
-
-      &.active {
-        background-color: inherit;
-
-        &::before {
-          width: 30px;
-          top: 25px;
-          transform: rotate(135deg);
-        }
-
-        &::after {
-          width: 30px;
-          top: 25px;
-          transform: rotate(225deg);
-        }
-      }
-    }
-  }
-
-  .hamburger_menu {
-    position: absolute;
-    @include flex(center, space-around, column);
-    left: 0px;
-    top: 0px;
-    height: 400px;
-    width: 250px;
-    background-color: black;
-    box-sizing: border-box;
-    color: white;
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transform: scale(1.1);
-
-      a {
-        position: relative;
-        width: max-content;
-        height: max-content;
-        color: white;
-        text-decoration: none;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 16px;
-        padding: 5px;
-        display: grid;
-        place-items: center;
-        letter-spacing: 2.7px;
-        box-sizing: border-box;
-        text-transform: capitalize;
-        cursor: pointer;
-
-        &::after {
-          position: absolute;
-          content: "";
-          background: white;
-          bottom: 0;
-          right: 0;
-          height: 2px;
-          width: 0%;
-          transition: 300ms ease-in-out;
-        }
-        &:hover::after {
-          width: 100%;
-          left: 0;
-        }
-        &.active-tab {
-          &::after {
-            position: absolute;
-            content: "";
-            background: white;
-            bottom: 0;
-            right: 0;
-            height: 2px;
-            width: 100%;
-            transition: 300ms ease-in-out;
-          }
-          &:hover::after {
-            width: 100%;
-            left: 0;
-          }
-        }
-      }
-    }
-
-    a {
-      display: none;
-    }
-  }
-
-  .tab {
+  .desktop_nav {
     height: 90%;
     width: 60%;
     display: flex;
@@ -240,6 +111,137 @@
           left: 0;
         }
       }
+    }
+  }
+
+  .hamburger_container {
+    @include flex;
+    position: absolute;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+
+    @include respondMax(mobile) {
+      display: inherit;
+    }
+
+    .hamburger {
+      background-color: white;
+      width: 30px;
+      height: 2px;
+      cursor: pointer;
+      transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      &::before {
+        top: 15px;
+        right: 10px;
+      }
+      &::after {
+        bottom: 15px;
+      }
+
+      &.active {
+        background-color: inherit;
+
+        &::before {
+          width: 30px;
+          top: 25px;
+          transform: rotate(135deg);
+        }
+
+        &::after {
+          width: 30px;
+          top: 25px;
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+
+  .mobile_nav {
+    position: absolute;
+    @include flex(center, space-around, column);
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 250px;
+    background-color: black;
+    box-sizing: border-box;
+    color: white;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-200px);
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0px);
+
+      a {
+        position: relative;
+        width: max-content;
+        height: max-content;
+        color: white;
+        text-decoration: none;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        padding: 5px;
+        display: grid;
+        place-items: center;
+        letter-spacing: 2.7px;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: white;
+          bottom: 0;
+          right: 0;
+          height: 2px;
+          width: 0%;
+          transition: 300ms ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+        &.active_tab {
+          &::after {
+            position: absolute;
+            content: "";
+            background: white;
+            bottom: 0;
+            right: 0;
+            height: 2px;
+            width: 100%;
+            transition: 300ms ease-in-out;
+          }
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    a {
+      display: none;
     }
   }
 }
