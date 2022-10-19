@@ -9,7 +9,6 @@ const listTab = ["destination", "crew", "technology"];
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-
   const router = useRouter();
 
   function handleToggle() {
